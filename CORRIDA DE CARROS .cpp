@@ -1,11 +1,11 @@
 #include <iostream>
-#include <ctime>
-using namespace std;
+#include <ctime> // para usar o tipo string
+using namespace std; // usa o tempo como "semente" do gerador 
 
-void imprimir_espacos(int rodada);
-int main()
+void imprimir_espacos(int rodada); //identifica a função void criada 
+int main() //função principal
 {
-	int total_espacos = 50;
+	int total_espacos = 50; //
 	int espacos_1 = 0;
 	int espacos_2 = 0;
 	while (espacos_1 < total_espacos && espacos_2 < total_espacos)
