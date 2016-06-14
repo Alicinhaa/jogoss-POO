@@ -1,23 +1,23 @@
 #include <iostream>
-#include <string>
-#include <ctime>
+#include <string> //para usar o tipo de dado string
+#include <ctime>  // usa o tempo como "semente " do gerador 
 
-using namespace std;
+using namespace std; // função principal 
 
 int main(int argc, char* args[])
 {
-	bool sair = false;
-	string jog1, jog2;
-	int vida1 = 20, vida2 = 20;
-	int A = 4, D = 2;
+	bool sair = false; // variável lógica para usar na condição do laço
+	string jog1, jog2; // variável que salva o nome dos jogadores 
+	int vida1 = 20, vida2 = 20; // define a vida inicial do jogador 
+	int A = 4, D = 2; // ataque e defesa do jogador 
 
 
-	cout << "Digite o nome do jogador 1:" << endl;
-	cin >> jog1;
+	cout << "Digite o nome do jogador 1:" << endl; //pede para que o jogador 1 digite o nome 
+	cin >> jog1; //salva o nome digitado na variável jog1
 
-	cout << "Digite o nome do jogador 2:" << endl;
-	cin >> jog2;
-	while (sair == false) {
+	cout << "Digite o nome do jogador 2:" << endl; // pede para que o jogador 2 digite o nome 
+	cin >> jog2; // salva o nome na variável jog2
+	while (sair == false) { // imprime os guerreiros e mostra o nome,vida e status
 
 
 		cout << " o                       o" << endl;
@@ -29,13 +29,13 @@ int main(int argc, char* args[])
 		cout << "D:" << D << "           " << "D:" << D << endl;
 
 
-		system("pause");
+		system("pause");// pausa para que os jogadores apareçam na tela
 
 		int dado6;
 
 		//Adiciona uma "semente" ao gerador de numeros
 		srand((int)time(0));
-		//Gera um n�mero aletorio
+		//Gera um número aletorio
 		dado6 = rand() % 6 + 1;
 		//Gera um dano no jogador 1
 		if (dado6 > 4)
@@ -79,7 +79,7 @@ int main(int argc, char* args[])
 
 		system("cls");
 
-		// se sair n�o limpa a tela
+		// se sair não limpa a tela
 		if (vida1 <= 0 || vida2 <= 0)
 		{
 
